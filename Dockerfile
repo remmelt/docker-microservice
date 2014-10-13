@@ -1,5 +1,4 @@
-# TODO inherit from java:8-jre, wait for PR to be granted
-FROM remmelt/java8
+FROM java:8-jre
 
 MAINTAINER Remmelt Pit <remmelt@remmelt.com>
 
