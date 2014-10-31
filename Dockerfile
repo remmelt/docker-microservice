@@ -3,6 +3,7 @@ FROM java:8-jre
 MAINTAINER Remmelt Pit <remmelt@remmelt.com>
 
 ADD run.sh /microservice/
+RUN chmod +x /microservice/run.sh
 
 ONBUILD ADD target/*.jar /microservice/
 ONBUILD ADD target/classes/config.yml /microservice/
