@@ -5,8 +5,9 @@ MAINTAINER Remmelt Pit <remmelt@remmelt.com>
 ADD run.sh /microservice/
 RUN chmod +x /microservice/run.sh
 
-ONBUILD ADD target/*.jar /microservice/
-ONBUILD ADD target/classes/config.yml /microservice/
+ONBUILD COPY target/*.jar /microservice/
+ONBUILD COPY target/classes/config.yml /microservice/
+ONBUILD COPY target/dependencies/*.jar /microservice/dependencies/
 
 EXPOSE 8080 8081
 
